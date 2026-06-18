@@ -6,6 +6,12 @@ plugins {
     id("org.jetbrains.changelog")
 }
 
+intellijPlatform {
+    pluginConfiguration {
+        name = "Gradle Project Paths"
+    }
+}
+
 dependencies {
     testImplementation("junit:junit:4.13.2")
 
@@ -13,5 +19,10 @@ dependencies {
     intellijPlatform {
         intellijIdea("2025.2.6.2")
         testFramework(TestFrameworkType.Platform)
+        bundledPlugins(
+            "org.jetbrains.kotlin",
+            "com.intellij.java",
+            "com.intellij.gradle",
+        )
     }
 }
