@@ -1,4 +1,4 @@
-package com.github.simonmarquis.gradleprojectpaths.toolWindow
+package fr.smarquis.gradle_project_paths.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.simonmarquis.gradleprojectpaths.MyBundle
-import com.github.simonmarquis.gradleprojectpaths.services.MyProjectService
+import fr.smarquis.gradle_project_paths.MyBundle
+import fr.smarquis.gradle_project_paths.services.MyProjectService
 import javax.swing.JButton
 
 

@@ -1,4 +1,4 @@
-package com.github.simonmarquis.gradleprojectpaths.startup
+package fr.smarquis.gradle_project_paths.startup
 
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project

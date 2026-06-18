@@ -1,9 +1,9 @@
-package com.github.simonmarquis.gradleprojectpaths.services
+package fr.smarquis.gradle_project_paths.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.simonmarquis.gradleprojectpaths.MyBundle
+import fr.smarquis.gradle_project_paths.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

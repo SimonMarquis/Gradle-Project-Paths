@@ -1,4 +1,4 @@
-package com.github.simonmarquis.gradleprojectpaths
+package fr.smarquis.gradle_project_paths
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
