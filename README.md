@@ -16,10 +16,9 @@
 
 ## Features
 
-- Autocomplete Gradle project paths `project("...")`
-- Detect unknown Gradle project paths
-- Gutter icon to navigate to corresponding Gradle build file
-- <kbd>Ctrl</kbd>+<kbd>click</kbd> on path to navigate to corresponding Gradle build file
+- **Autocompletion**: suggests all Gradle project paths inside `project("...")` calls
+- **Validation**: detect and highlights unknown Gradle project paths
+- **Navigation** gutter icons or <kbd>Ctrl</kbd>+<kbd>click</kbd> on Gradle project paths to jump to its Gradle build file
 
 ## Installation
 
