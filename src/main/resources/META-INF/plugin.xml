@@ -1,19 +1,41 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.simonmarquis.gradleprojectpaths</id>
-    <name>Gradle-Project-Paths</name>
-    <vendor>simonmarquis</vendor>
+    <id>gradle-project-paths</id>
+    <name>Gradle Project Paths</name>
+    <vendor url="https://github.com/SimonMarquis/Gradle-Project-Paths">Simon Marquis</vendor>
     <description><![CDATA[
-        <p><b>Gradle-Project-Paths</b> is a repository that provides a pure template to make it easier to create a new plugin project.</p>
-        <p>The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.</p>
+        <p><b>Gradle-Project-Paths</b> is a plugin that helps autocomplete Gradle project paths.</p>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.gradle</depends>
+    <depends>org.jetbrains.kotlin</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.GradleProjectPathsBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.simonmarquis.gradleprojectpaths.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.simonmarquis.gradleprojectpaths.startup.MyProjectActivity" />
+        <annotator language="kotlin"
+                   implementationClass="fr.smarquis.intellij.gpp.GradleProjectPathsAnnotator"/>
+        <codeInsight.lineMarkerProvider language="kotlin"
+                                        implementationClass="fr.smarquis.intellij.gpp.GradleProjectPathsLineMarkerProvider"/>
+        <completion.contributor language="kotlin"
+                                id="gradleProjectPathsKotlin"
+                                implementationClass="fr.smarquis.intellij.gpp.GradleProjectPathsCompletionContributor"
+                                order="first, before KotlinCompletionContributor, before default"/>
+        <psi.referenceContributor language="kotlin"
+                                  implementation="fr.smarquis.intellij.gpp.GradleProjectReferenceContributor"/>
     </extensions>
+
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true"/>
+    </extensions>
+
+    <actions>
+        <action id="fr.smarquis.intellij.gpp.GradleProjectPathsRefreshAction"
+                class="fr.smarquis.intellij.gpp.GradleProjectPathsRefreshAction"
+                icon="GradleIcons.GradleLoadChanges">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+
+    </actions>
 </idea-plugin>

@@ -1,6 +1,6 @@
 import org.jetbrains.intellij.platform.gradle.extensions.intellijPlatform
 
-rootProject.name = "IntelliJ Platform Plugin Template"
+rootProject.name = "Gradle-Project-Paths"
 
 pluginManagement {
     plugins {
@@ -16,7 +16,6 @@ plugins {
 
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
-    // Configure all projects' repositories
     repositories {
         mavenCentral()
 
