@@ -43,7 +43,7 @@
 ## Credits
 
 - Plugin based on the [IntelliJ Platform Plugin Template][template] and [slackhq/foundry Skate plugin](https://github.com/slackhq/foundry/tree/main/platforms/intellij/skate)
-- Idea inspired by @ZacSweers - [Don't use Type-safe Project Accessors with Kotlin Gradle DSL](https://www.zacsweers.dev/dont-use-type-safe-project-accessors-with-kotlin-gradle-dsl/)
+- Inspired by [@ZacSweers](https://github.com/ZacSweers) - [Don't use Type-safe Project Accessors with Kotlin Gradle DSL](https://www.zacsweers.dev/dont-use-type-safe-project-accessors-with-kotlin-gradle-dsl/)
 - Removing projects recompiles `build.gradle.kts` files when using typesafe project accessors [gradle/issues#34088](https://github.com/gradle/gradle/issues/34088)
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
