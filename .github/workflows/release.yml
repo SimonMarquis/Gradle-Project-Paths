@@ -17,15 +17,10 @@ jobs:
       pull-requests: write
     steps:
 
-      - name: Maximize Build Space
-        uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          tool-cache: false
-          large-packages: false
-
       - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.release.tag_name }}
+      - uses: ./.github/actions/free-disk-space
       - uses: ./.github/actions/setup-java
       - uses: ./.github/actions/setup-gradle
         with:

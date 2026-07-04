@@ -27,13 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Maximize Build Space
-        uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          tool-cache: false
-          large-packages: false
-
       - uses: actions/checkout@v6
+      - uses: ./.github/actions/free-disk-space
       - uses: ./.github/actions/setup-java
       - uses: ./.github/actions/setup-gradle
         with:
@@ -53,13 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Maximize Build Space
-        uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          tool-cache: false
-          large-packages: false
-
       - uses: actions/checkout@v6
+      - uses: ./.github/actions/free-disk-space
       - uses: ./.github/actions/setup-java
       - uses: ./.github/actions/setup-gradle
         with:
@@ -81,13 +71,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Maximize Build Space
-        uses: jlumbroso/free-disk-space@v1.3.1
-        with:
-          tool-cache: false
-          large-packages: false
-
       - uses: actions/checkout@v6
+      - uses: ./.github/actions/free-disk-space
       - uses: ./.github/actions/setup-java
       - uses: ./.github/actions/setup-gradle
         with:
