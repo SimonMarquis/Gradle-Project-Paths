@@ -1,6 +1,6 @@
 <h1>
   <img src=".idea/icon.png" alt="Plugin icon" width="32">
-  Gradle-Project-Paths
+  Gradle Project Paths
 </h1>
 
 > An IntelliJ plugin that helps autocomplete Gradle project paths.
