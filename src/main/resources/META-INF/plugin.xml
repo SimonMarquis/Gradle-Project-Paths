@@ -4,7 +4,16 @@
     <name>Gradle Project Paths</name>
     <vendor url="https://github.com/SimonMarquis/Gradle-Project-Paths">Simon Marquis</vendor>
     <description><![CDATA[
-        <p><b>Gradle-Project-Paths</b> is a plugin that helps autocomplete Gradle project paths.</p>
+        <p>
+          An IntelliJ plugin that helps autocomplete Gradle project paths.<br>
+          For those of us who'd rather avoid <code>enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")</code>.
+        </p>
+        <ul>
+          <li>Autocomplete Gradle project paths <code>project("...")</code></li>
+          <li>Detect unknown Gradle project paths</li>
+          <li>Gutter icon to navigate to the corresponding Gradle build file</li>
+          <li><kbd>Ctrl</kbd>+<kbd>Click</kbd> on a path to navigate to the corresponding Gradle build file</li>
+        </ul>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
