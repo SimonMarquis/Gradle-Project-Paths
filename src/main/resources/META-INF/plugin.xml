@@ -9,10 +9,9 @@
           For those of us who'd rather avoid <code>enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")</code>.
         </p>
         <ul>
-          <li>Autocomplete Gradle project paths <code>project("...")</code></li>
-          <li>Detect unknown Gradle project paths</li>
-          <li>Gutter icon to navigate to the corresponding Gradle build file</li>
-          <li><kbd>Ctrl</kbd>+<kbd>Click</kbd> on a path to navigate to the corresponding Gradle build file</li>
+          <li><b>Autocompletion</b>: suggests all Gradle project paths inside <code>project("...")</code> calls
+          <li><b>Validation</b>: detect and highlights unknown Gradle project paths
+          <li><b>Navigation</b> gutter icons or <kbd>Ctrl</kbd>+<kbd>click</kbd> on Gradle project paths to jump to its Gradle build file
         </ul>
     ]]></description>
 
