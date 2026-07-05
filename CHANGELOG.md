@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.0.4] - 2026-07-05
+
 ### Added
 
 - Sort completion results (IDE can still re-order)
@@ -16,5 +18,6 @@
 
 - 🎉 Initial release
 
-[Unreleased]: https://github.com/SimonMarquis/Gradle-Project-Paths/compare/v0.0.3...HEAD
+[Unreleased]: https://github.com/SimonMarquis/Gradle-Project-Paths/compare/v0.0.4...HEAD
+[0.0.4]: https://github.com/SimonMarquis/Gradle-Project-Paths/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/SimonMarquis/Gradle-Project-Paths/commits/v0.0.3
