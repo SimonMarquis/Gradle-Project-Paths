@@ -28,10 +28,13 @@ class GradleProjectPathsCompletionContributor : CompletionContributor() {
             result: CompletionResultSet
         ) {
             parameters.position.resolveProjectCallFromLeaf() ?: return
-            parameters.position.project.gpp().gradleProjects().keys
+            parameters.position.project.gpp().gradleProjects()
+                .filterValues { parameters.originalFile.virtualFile != it.buildScriptFile } // Remove self
+                .keys.sorted()
                 .map {
                     LookupElementBuilder.create(it)
                         .withIcon(GradleIcons.GradleFile)
+                        .run { if (it == ":") withTailText("(root)") else this }
                         .withTypeText(GradleProjectPathsBundle["gpp.contributor-label"])
                 }
                 .let(result::addAllElements)

@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Added
+
+- Sort completion results (IDE can still re-order)
+- Remove self project path from completion results
+- Add hint for the root project path `:` in completion results
+
 ## [0.0.3] - 2026-07-05
 
 ### Added
