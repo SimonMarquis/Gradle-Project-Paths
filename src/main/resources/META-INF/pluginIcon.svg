@@ -7,10 +7,10 @@
     </defs>
     <!-- 2px transparent padding -->
     <rect x="2" y="2" width="36" height="36" rx="4" fill="url(#bg)"/>
-    <text x="20" y="19"
+    <text x="20" y="20"
           fill="white"
-          font-family="monospace" font-size="20" font-weight="bold"
+          font-family="monospace" font-size="16" font-weight="bold"
           text-anchor="middle" dominant-baseline="central"
-          alignment-baseline="central">:∗:
+          alignment-baseline="central">:❋:
     </text>
 </svg>
