@@ -14,6 +14,11 @@ inputs:
       By default this value is 'false' for workflows on the GitHub default branch and 'true' for workflows on other branches.
     required: false
     default: ${{ github.event.repository != null && github.ref_name != github.event.repository.default_branch }}
+  build-scan-publish:
+    description: |
+      Set to 'true' to automatically publish build results as a Build Scan on scans.gradle.com.
+    required: false
+    default: true
 runs:
   using: composite
   steps:
@@ -26,3 +31,6 @@ runs:
         cache-read-only: ${{ inputs.cache-read-only }}
         gradle-home-cache-strict-match: true
         validate-wrappers: true
+        build-scan-publish: ${{ inputs.build-scan-publish }}
+        build-scan-terms-of-use-url: https://gradle.com/help/legal-terms-of-use
+        build-scan-terms-of-use-agree: yes
