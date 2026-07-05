@@ -19,7 +19,6 @@ import org.jetbrains.kotlin.psi.KtLiteralStringTemplateEntry
 import org.jetbrains.kotlin.psi.KtNameReferenceExpression
 import org.jetbrains.kotlin.psi.KtStringTemplateExpression
 import org.jetbrains.plugins.gradle.util.GradleConstants
-import org.jetbrains.plugins.gradle.util.GradleUtil
 
 object GradleProjectPathsUtils {
 
@@ -70,10 +69,10 @@ object GradleProjectPathsUtils {
 
     //region Gradle File paths
     fun ProjectCall.resolveGradleBuildFile(): PsiFile? {
-        val (moduleData, module, _) = call.project.gpp().gradleProjects()[path]
+        val it = call.project.gpp().gradleProjects()[path]
             ?: return null
-        val buildScriptFile = module?.let(GradleUtil::getGradleBuildScriptSource)
-            ?: return fallbackGradleBuildFile(moduleData)
+        val buildScriptFile = it.buildScriptFile
+            ?: return fallbackGradleBuildFile(it.moduleData)
         return PsiManager.getInstance(call.project).findFile(buildScriptFile)
     }
 
