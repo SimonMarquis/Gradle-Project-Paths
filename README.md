@@ -4,7 +4,7 @@
 </h1>
 
 > An IntelliJ plugin that helps autocomplete Gradle project paths.  
-> For those of us who'd rather avoid `enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")`.
+> For those of us who'd rather avoid [`enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")`](https://docs.gradle.org/current/userguide/declaring_dependencies_basics.html#sec:type-safe-project-accessors).
 
 ![Build](https://github.com/SimonMarquis/Gradle-Project-Paths/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/32671.svg)](https://plugins.jetbrains.com/plugin/32671)
