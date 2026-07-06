@@ -7,6 +7,7 @@ import fr.smarquis.intellij.gpp.GradleProjectPathsUtils.ProjectCall
 import fr.smarquis.intellij.gpp.GradleProjectPathsUtils.psiGradleBuildFilePattern
 import fr.smarquis.intellij.gpp.GradleProjectPathsUtils.resolveGradleBuildFile
 import fr.smarquis.intellij.gpp.GradleProjectPathsUtils.resolveProjectCallFromLeaf
+import org.jetbrains.kotlin.idea.base.psi.textRangeIn
 import org.jetbrains.kotlin.psi.KtStringTemplateExpression
 
 
@@ -29,7 +30,7 @@ class GradleProjectReferenceProvider : PsiReferenceProvider() {
 }
 
 class GradleProjectReference(element: PsiElement, val call: ProjectCall) :
-    PsiReferenceBase<PsiElement>(element, call.literal.textRange) {
+    PsiReferenceBase<PsiElement>(element, /* rangeInElement = */ call.literal.textRangeIn(element)) {
     override fun resolve() = call.resolveGradleBuildFile()
 }
 
