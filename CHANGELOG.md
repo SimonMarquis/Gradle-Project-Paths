@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- _Go To Declaration_ (Ctrl+Click or Middle-Click) on Android Studio
+
 ## [0.0.4] - 2026-07-05
 
 ### Added
