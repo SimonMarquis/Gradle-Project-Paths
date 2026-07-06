@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Run plugin on Android Studio
+
 ### Fixed
 
 - _Go To Declaration_ (Ctrl+Click or Middle-Click) on Android Studio
