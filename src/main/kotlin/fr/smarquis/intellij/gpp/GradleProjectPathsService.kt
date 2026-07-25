@@ -45,6 +45,11 @@ class GradleProjectPathsService(val project: Project) : Disposable {
         gradleProjects = null
     }
 
+    @org.jetbrains.annotations.TestOnly
+    internal fun setGradleProjectsForTest(projects: Map<String, GradleModuleDataHolder>) {
+        gradleProjects = projects
+    }
+
     override fun dispose() {
         connection?.disconnect()
         connection = null
