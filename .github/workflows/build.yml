@@ -32,6 +32,8 @@ jobs:
     steps:
 
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: $/.github/actions/free-disk-space
       - uses: $/.github/actions/setup-java
       - uses: $/.github/actions/setup-gradle
@@ -53,6 +55,8 @@ jobs:
     steps:
 
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: $/.github/actions/free-disk-space
       - uses: $/.github/actions/setup-java
       - uses: $/.github/actions/setup-gradle
@@ -76,6 +80,8 @@ jobs:
     steps:
 
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: $/.github/actions/free-disk-space
       - uses: $/.github/actions/setup-java
       - uses: $/.github/actions/setup-gradle
@@ -105,6 +111,8 @@ jobs:
     steps:
 
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: $/.github/actions/setup-java
       - uses: $/.github/actions/setup-gradle
         with:
